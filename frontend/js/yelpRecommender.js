@@ -7,7 +7,6 @@ $(document).ready(() => {
 });
 
 function getRestaurants(zipCode) {
-    console.log(port)
     $.ajax({
         type: "GET",
         url: 'https://random-restaurant-zipcode-api.herokuapp.com/api/stores/'+zipCode,
@@ -46,7 +45,6 @@ function restaurantSelected(storeId) {
 
 function getRestaurant() {
     let restaurantId = sessionStorage.getItem('storeId');
-    console.log(port)
     $.ajax({
         type: "GET",
         url: 'https://random-restaurant-zipcode-api.herokuapp.com/api/stores/single/'+restaurantId,
